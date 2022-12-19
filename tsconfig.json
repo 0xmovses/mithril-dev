@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "~/*": [
+        "*"
+      ]
+    },
+    "outDir": "./dist/",
+    "jsx": "react",
+    "jsxFactory": "m",
+    "allowJs": true,
+    "checkJs": true,
+    "types": [
+      "cypress"
+    ]
+  },
+  "include": [
+    "*",
+    "src/**/*",
+    ".storybook/**/*",
+    ".cypress/**/*"
+  ],
+  "exclude": [
+    ".storybook/static/mockServiceWorker.js"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+  "baseUrl": "http://localhost:8080",
+  "viewportWidth": 1280,
+  "viewportHeight": 1024,
+  "responseTimeout": 5000,
+  "defaultCommandTimeout": 500,
+  "video": false,
+  "trashAssetsBeforeRuns": true,
+  "testFiles": "**/*.spec.ts",
+  "fixturesFolder": ".cypress/fixtures",
+  "integrationFolder": "src",
+  "pluginsFile": false,
+  "screenshotsFolder": ".cypress/screenshots",
+  "supportFile": ".cypress/support/index.ts",
+  "videosFolder": ".cypress/videos"
+}

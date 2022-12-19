@@ -1,0 +1,11 @@
+:local(.local) {
+  // Formatting for sidebar with icons.
+  .aside .icon:first-child {
+    margin-right: 0.5em;
+  }
+
+  .aside a {
+    align-items: center;
+    display: flex;
+  }
+}
