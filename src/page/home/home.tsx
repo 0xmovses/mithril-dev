@@ -1,4 +1,4 @@
-/* eslint-disable */
+//* eslint-disable */
 // @ts-nocheck
 import { ClassComponent, ResultNode, render, setRoute, getRoute, getRouteParam,  Component, jsx } from '../../helper/reactInterop';
 import m from 'mithril';
