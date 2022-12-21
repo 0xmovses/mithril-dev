@@ -1,22 +1,30 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "target": "esnext",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "target": "es5",
+    "module": "CommonJS",
     "esModuleInterop": true,
-    "downlevelIteration": true,
-    "traceResolution": false,
+    "baseUrl": "./",
+    "strict": true,
     "paths": {
-      "common-common": ["./packages/common-common"],
-      "common-common/*": ["./packages/common-common/*"],
-      "chain-events": ["./packages/chain-events"],
-      "chain-events/*": ["./packages/chain-events/*"],
-      "token-balance-cache": ["./packages/token-balance-cache"],
-      "token-balance-cache/*": ["./packages/token-balance-cache/*"],
-    }
+      "@/*": [
+        "src/*"
+      ],
+      "~/*": [
+        "*"
+      ]
+    },
+    "outDir": "./dist/",
+    "jsx": "react",
+    "jsxFactory": "m",
+    "allowJs": true,
+    "checkJs": true,
+    "types": [
+      "cypress"
+    ]
   },
   "include": [
     "*",

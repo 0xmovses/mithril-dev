@@ -123,17 +123,16 @@ export function getRoute() {
 
 }
 
-export function redraw(sync = false) {
-  // React does not have a built-in method for manually triggering a re-render.
-  // Instead, you can use the `setState` method to update the component's state and trigger a re-render.
-}
-
 export function parsePathname(url: string): { path: string; params: Params } {
   const match = matchPath(url, { path: url });
   return {
     path: match ? match.path : '',
     params: match ? match.params : {},
   };
+}
+
+export function render(element: Element, component?: any | null) {
+  ReactDOM.render()
 }
 
 export function rootRender(el: Element, vnodes: Children) {
