@@ -18,14 +18,15 @@
         "plugin:cypress/recommended",
         "plugin:prettier/recommended"
     ],
-    "rules" : [
+    "rules" : {
         "prettier/prettier": [
         "error",
         {
             "endOfLine": "auto"
         },
         ],
-    ]
+        }
+    ,
     "plugins": [
         "@typescript-eslint"
     ],
