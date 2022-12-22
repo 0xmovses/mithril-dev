@@ -19,6 +19,7 @@
         "plugin:prettier/recommended"
     ],
     "rules" : {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "prettier/prettier": [
             "error", 
             {
@@ -36,9 +37,7 @@
                 "*.tsx"
             ],
             "rules": {
-                "@typescript-eslint/explicit-module-boundary-types": [
-                    "error"
-                ]
+                "explicit-type-return": "off",
             }
         }
     ]
