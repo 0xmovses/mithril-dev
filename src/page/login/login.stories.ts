@@ -26,18 +26,18 @@ export const login = (args: {
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             return res(
               ctx.status(200),
               ctx.json({
                 status: 'OK',
-              }),
+              })
             );
           }
         }),
-      ],
+      ]
     );
   },
   view: () =>

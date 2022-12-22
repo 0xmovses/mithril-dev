@@ -46,7 +46,7 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                 m(
                   'h2',
                   { class: 'subtitle' },
-                  'Enter your login information below.',
+                  'Enter your login information below.'
                 ),
               ]),
               m('div', { class: 'container mt-4' }, [
@@ -60,7 +60,7 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                           clear();
                         })
                         // eslint-disable-next-line @typescript-eslint/no-empty-function, prettier/prettier
-                        .catch(() => { });
+                        .catch(() => {});
                     },
                   },
                   [
@@ -93,7 +93,7 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                             type: 'submit',
                             'data-cy': 'submit',
                           },
-                          submitText('Submit'),
+                          submitText('Submit')
                         ),
                       ]),
                       m('p', { class: 'control' }, [
@@ -106,23 +106,23 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                               clear();
                             },
                           },
-                          'Clear',
+                          'Clear'
                         ),
                       ]),
                       m('p', { class: 'control' }, [
                         m(
                           m.route.Link,
                           { class: 'button is-light', href: '/register' },
-                          'Register',
+                          'Register'
                         ),
                       ]),
                     ]),
-                  ],
+                  ]
                 ),
               ]),
             ]),
           ]),
-        ],
+        ]
       ),
   };
 };

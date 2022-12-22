@@ -154,7 +154,7 @@ export const action = (args: {
             showFlash(args.text, args.messageType);
           },
         },
-        'Show Flash',
+        'Show Flash'
       ),
       m(Flash),
     ]),

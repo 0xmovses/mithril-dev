@@ -18,8 +18,8 @@ export const Footer: m.ClosureComponent = () => {
         m(
           'div',
           { class: 'content has-text-centered' },
-          m('p', 'Copyright © 2020 Your Company. All rights reserved.'),
-        ),
+          m('p', 'Copyright © 2020 Your Company. All rights reserved.')
+        )
       ),
   };
 };

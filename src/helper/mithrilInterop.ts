@@ -29,10 +29,10 @@ export abstract class ClassComponent<A = {}> implements m.ClassComponent<A> {
   /** Do not use, only used for JSX validation */
   protected readonly __props: A;
 
-  public oninit(v: ResultNode<A>) { }
-  public onupdate(v: ResultNode<A>) { }
-  public onremove(v: ResultNode<A>) { }
-  public oncreate(v: ResultNode<A>) { }
+  public oninit(v: ResultNode<A>) {}
+  public onupdate(v: ResultNode<A>) {}
+  public onremove(v: ResultNode<A>) {}
+  public oncreate(v: ResultNode<A>) {}
 
   abstract view(v: ResultNode<A>): Children | null;
 }
@@ -57,7 +57,7 @@ export function redraw(sync = false) {
   if (!sync) {
     m.redraw();
   } else {
-    m.redraw.sync()
+    m.redraw.sync();
   }
 }
 

@@ -131,7 +131,7 @@ export const RegisterPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                         type: 'submit',
                         'data-cy': 'submit',
                       },
-                      submitText('Create Account'),
+                      submitText('Create Account')
                     ),
                   ]),
                   m('p', { class: 'control' }, [
@@ -144,11 +144,11 @@ export const RegisterPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
                           clear();
                         },
                       },
-                      'Clear',
+                      'Clear'
                     ),
                   ]),
                 ]),
-              ],
+              ]
             ),
           ]),
         ]),

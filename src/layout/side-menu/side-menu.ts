@@ -27,11 +27,11 @@ export const SideMenu: m.ClosureComponent = () => {
                     m('i', {
                       class: 'fas fa-home',
                       'aria-hidden': 'true',
-                    }),
+                    })
                   ),
                   'Welcome',
-                ],
-              ),
+                ]
+              )
             ),
             m(
               'li',
@@ -49,11 +49,11 @@ export const SideMenu: m.ClosureComponent = () => {
                     m('i', {
                       class: 'fas fa-sticky-note',
                       'aria-hidden': 'true',
-                    }),
+                    })
                   ),
                   'Notepad',
-                ],
-              ),
+                ]
+              )
             ),
           ]),
           m('p', { class: 'menu-label' }, 'Public'),
@@ -74,11 +74,11 @@ export const SideMenu: m.ClosureComponent = () => {
                     m('i', {
                       class: 'fas fa-address-card',
                       'aria-hidden': 'true',
-                    }),
+                    })
                   ),
                   'About',
-                ],
-              ),
+                ]
+              )
             ),
           ]),
         ]),

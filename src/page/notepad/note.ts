@@ -38,7 +38,7 @@ export const Note = (): m.Component<Attrs, State> => {
                         m.redraw();
                       }, 1000);
                     },
-                    1000,
+                    1000
                   );
                 },
               }),
@@ -68,13 +68,13 @@ export const Note = (): m.Component<Attrs, State> => {
                       'data-cy': 'delete-note-link',
                     }),
                   ]),
-                ],
+                ]
               ),
             ]),
             m(
               'div',
               { class: 'level-right', style: { 'min-height': '1.2rem' } },
-              [m('span', { class: 'is-size-7 has-text-grey' }, state.saving)],
+              [m('span', { class: 'is-size-7 has-text-grey' }, state.saving)]
             ),
           ]),
         ]),

@@ -85,7 +85,7 @@ export const runUpdate = (id: string, value: string): void => {
     if (response) {
       showFlash(
         `Could not update note: ${response.message}`,
-        MessageType.warning,
+        MessageType.warning
       );
     } else {
       showFlash('An error occurred.', MessageType.warning);
@@ -114,7 +114,7 @@ export const runDelete = (id: string): Promise<void> => {
       if (response) {
         showFlash(
           `Could not delete note: ${response.message}`,
-          MessageType.warning,
+          MessageType.warning
         );
       } else {
         showFlash('An error occurred.', MessageType.warning);

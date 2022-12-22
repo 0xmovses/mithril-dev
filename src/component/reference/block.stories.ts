@@ -21,7 +21,7 @@ export const button = (args: {
           console.log('Clicked!');
         },
       },
-      args.label,
+      args.label
     ),
 });
 button.args = {

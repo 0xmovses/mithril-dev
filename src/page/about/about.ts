@@ -29,7 +29,7 @@ export const AboutPage: m.ClosureComponent = () => {
               m('strong', 'Bulma'),
               '.',
             ]),
-          ],
+          ]
         ),
       ]),
   };

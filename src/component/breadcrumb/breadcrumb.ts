@@ -30,14 +30,14 @@ export const Breadcrumb = (): m.Component<Attrs> => {
                   m(
                     'span',
                     { class: 'icon is-small' },
-                    m('i', { class: 'fas ' + v.icon, 'aria-hidden': 'true' }),
+                    m('i', { class: 'fas ' + v.icon, 'aria-hidden': 'true' })
                   ),
                   m('span', v.name),
-                ]),
-              ),
+                ])
+              )
             ),
-          ]),
-        ),
+          ])
+        )
       ),
   };
 };

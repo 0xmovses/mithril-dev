@@ -90,7 +90,7 @@ export const NotepadPage: m.ClosureComponent = () => {
                           'data-cy': 'add-note-link',
                         }),
                       ]),
-                    ],
+                    ]
                   ),
                 ]),
               ]),
@@ -110,7 +110,7 @@ export const NotepadPage: m.ClosureComponent = () => {
                         return i.id !== id;
                       });
                     },
-                  }),
+                  })
                 ),
               ]),
             ]),

@@ -37,7 +37,7 @@ module.exports = {
             __dirname,
             '.storybook',
             'static',
-            'mockServiceWorker.js',
+            'mockServiceWorker.js'
           ),
           to: '',
         },

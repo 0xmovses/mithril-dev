@@ -30,14 +30,14 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             return res(
               ctx.status(200),
               ctx.json({
                 notes: notes,
-              }),
+              })
             );
           }
         }),
@@ -47,7 +47,7 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             const { noteId } = req.params;
@@ -56,7 +56,7 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(200),
               ctx.json({
                 message: 'ok',
-              }),
+              })
             );
           }
         }),
@@ -66,7 +66,7 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             const m = req.body as MessageResponse;
@@ -76,7 +76,7 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(201),
               ctx.json({
                 message: 'ok',
-              }),
+              })
             );
           }
         }),
@@ -86,7 +86,7 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             const { noteId } = req.params;
@@ -95,11 +95,11 @@ export const notepad = (args: { fail: boolean }): m.Component => ({
               ctx.status(200),
               ctx.json({
                 message: 'ok',
-              }),
+              })
             );
           }
         }),
-      ],
+      ]
     );
   },
   view: () => m('main', [m(NotepadPage), m(Flash)]),

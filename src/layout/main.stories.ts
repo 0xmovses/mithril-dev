@@ -21,8 +21,8 @@ export const simplePage = (args: {
           title: args.title,
           description: args.description,
         },
-        args.content,
-      ),
+        args.content
+      )
     );
   },
 });

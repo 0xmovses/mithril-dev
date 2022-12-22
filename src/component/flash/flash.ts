@@ -99,8 +99,8 @@ export const Flash: m.Component = {
                 internalFlash.removeFlash(i);
               },
             }),
-          ]),
+          ])
         ),
-      ],
+      ]
     ),
 };

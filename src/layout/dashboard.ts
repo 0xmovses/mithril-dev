@@ -23,7 +23,7 @@ export const DashboardLayout = (): m.Component => {
           ]),
           m(Footer),
           m(Flash),
-        ],
+        ]
       ),
   };
 };

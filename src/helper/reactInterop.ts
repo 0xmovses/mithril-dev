@@ -8,33 +8,30 @@ import {
   ReactElement,
   ReactNode,
   // eslint-disable-next-line import/no-unresolved
-  Component as ReactComponent
+  Component as ReactComponent,
 } from 'react';
 import renderer from 'react-hyperscript';
-import {
-  matchPath, BrowserRouter
-} from 'react-router-dom';
+import { matchPath, BrowserRouter } from 'react-router-dom';
 import * as ReactDOM from 'react-dom';
 
 /// CYANO CODE
-
 
 type RenderElement = ReactElement | string | number | null;
 export type Children = ReactNode | ReactNode[];
 
 declare function renderFunction(
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement,
+  children?: Children | ReadonlyArray<RenderElement> | RenderElement
 ): ReactElement;
 
 declare function renderFunction<P = unknown>(
   componentOrTag: FunctionComponent<P> | string,
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement,
+  children?: Children | ReadonlyArray<RenderElement> | RenderElement
 ): ReactElement;
 
 declare function renderFunction<P = unknown>(
   componentOrTag: FunctionComponent<P> | string,
   properties: P | null,
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement,
+  children?: Children | ReadonlyArray<RenderElement> | RenderElement
 ): ReactElement<P>;
 
 type FragmentProps = {
@@ -44,7 +41,7 @@ type FragmentProps = {
 type HyperScript = typeof renderFunction & {
   trust: (
     html: string,
-    wrapper?: string,
+    wrapper?: string
   ) => ReactElement<{
     dangerouslySetInnerHTML: {
       __html: string;
@@ -54,26 +51,28 @@ type HyperScript = typeof renderFunction & {
   displayName: string;
 };
 
-export const render: HyperScript = Object.assign(renderer as typeof renderFunction, {
-  trust: (
-    html: string,
-    wrapper: FunctionComponent | string = '',
-  ): ReactElement =>
-    renderer(wrapper, {
-      dangerouslySetInnerHTML: { __html: html },
-    }),
-  fragment: (props: FragmentProps = {}, children: ReactNode = []) => (
-    <Fragment {...props}>{children}</Fragment>
-  ),
-  displayName: 'react',
-});
+export const render: HyperScript = Object.assign(
+  renderer as typeof renderFunction,
+  {
+    trust: (
+      html: string,
+      wrapper: FunctionComponent | string = ''
+    ): ReactElement =>
+      renderer(wrapper, {
+        dangerouslySetInnerHTML: { __html: html },
+      }),
+    fragment: (props: FragmentProps = {}, children: ReactNode = []) => (
+      <Fragment {...props}>{children}</Fragment>
+    ),
+    displayName: 'react',
+  }
+);
 
 export type Component<Props = unknown> = FunctionComponent<Props>;
 
 export const jsx = createElement;
 
 export type ResultNode<A> = ReactElement<A>;
-
 
 /// END CYANO CODE
 
@@ -98,10 +97,10 @@ export abstract class ClassComponent<A = {}> extends ReactComponent<A> {
     return this.view(this.props);
   }
 
-  public oninit(v: Readonly<A>) {};
-  public onupdate(v: Readonly<A>) {};
-  public onremove(v: Readonly<A>) {};
-  public oncreate(v: Readonly<A>) {};
+  public oninit(v: Readonly<A>) {}
+  public onupdate(v: Readonly<A>) {}
+  public onremove(v: Readonly<A>) {}
+  public oncreate(v: Readonly<A>) {}
 
   abstract view(v: Readonly<A>): Children | null;
 }
@@ -112,17 +111,11 @@ type RouteOptions = {
 
 type Params = { [key: string]: string };
 
-export function setRoute(route: string, data?: any, options?: RouteOptions) {
+export function setRoute(route: string, data?: any, options?: RouteOptions) {}
 
-}
+export function getRouteParam(name?: string) {}
 
-export function getRouteParam(name?: string) {
-
-}
-
-export function getRoute() {
-
-}
+export function getRoute() {}
 
 export function parsePathname(url: string): { path: string; params: Params } {
   const match = matchPath(url, { path: url });
@@ -133,7 +126,7 @@ export function parsePathname(url: string): { path: string; params: Params } {
 }
 
 export function render(element: Element, component?: any | null) {
-  ReactDOM.render()
+  ReactDOM.render();
 }
 
 export function rootRender(el: Element, vnodes: Children) {

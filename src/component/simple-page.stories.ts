@@ -18,7 +18,7 @@ export const withContent = (args: {
         title: args.title,
         description: args.description,
       },
-      args.content,
+      args.content
     ),
 });
 withContent.args = {

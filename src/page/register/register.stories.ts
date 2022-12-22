@@ -28,7 +28,7 @@ export const register = (args: {
               ctx.status(400),
               ctx.json({
                 message: 'There was an error.',
-              }),
+              })
             );
           } else {
             return res(
@@ -36,11 +36,11 @@ export const register = (args: {
               ctx.json({
                 status: 'Created',
                 record_id: '1',
-              }),
+              })
             );
           }
         }),
-      ],
+      ]
     );
   },
   view: () =>

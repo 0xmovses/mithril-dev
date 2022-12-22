@@ -1,6 +1,15 @@
-//* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import { ClassComponent, ResultNode, render, setRoute, getRoute, getRouteParam,  Component, jsx } from '../../helper/reactInterop';
+import {
+  ClassComponent,
+  ResultNode,
+  render,
+  setRoute,
+  getRoute,
+  getRouteParam,
+  Component,
+  jsx,
+} from '../../helper/reactInterop';
 import m from 'mithril';
 
 class HomePage extends ClassComponent {

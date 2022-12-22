@@ -48,7 +48,7 @@ export const Nav = (): m.Component => {
             m(
               m.route.Link,
               { class: 'navbar-item', href: '/', 'data-cy': 'home-link' },
-              m('strong', 'mithril-template'),
+              m('strong', 'mithril-template')
             ),
             m(
               'a',
@@ -69,7 +69,7 @@ export const Nav = (): m.Component => {
                 m('span', { 'aria-hidden': 'true' }),
                 m('span', { 'aria-hidden': 'true' }),
                 m('span', { 'aria-hidden': 'true' }),
-              ],
+              ]
             ),
           ]),
           m(
@@ -96,14 +96,14 @@ export const Nav = (): m.Component => {
                       return false;
                     },
                   },
-                  'Menu',
+                  'Menu'
                 ),
                 m('div', { class: 'navbar-dropdown is-right' }, [
                   !isLoggedIn() &&
                     m(
                       m.route.Link,
                       { class: 'navbar-item', href: '/login' },
-                      ' Login ',
+                      ' Login '
                     ),
                   m(
                     m.route.Link,
@@ -113,7 +113,7 @@ export const Nav = (): m.Component => {
                         (location.pathname === '/about' ? 'is-active' : ''),
                       href: '/about',
                     },
-                    'About',
+                    'About'
                   ),
                   m('hr', { class: 'navbar-divider' }),
                   isLoggedIn() &&
@@ -125,14 +125,14 @@ export const Nav = (): m.Component => {
                           logout();
                         },
                       },
-                      'Logout',
+                      'Logout'
                     ),
                   m('div', { class: 'navbar-item' }, 'v1.0.0'),
                 ]),
-              ]),
-            ),
+              ])
+            )
           ),
-        ],
+        ]
       ),
   };
 };

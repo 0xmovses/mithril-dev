@@ -22,7 +22,7 @@ export const handlers = [
       ctx.json({
         status: 'OK',
         message: 'ready',
-      } as GenericResponse),
+      } as GenericResponse)
     );
   }),
   // POST login.
@@ -41,7 +41,7 @@ export const handlers = [
           ctx.json({
             status: 'OK',
             token: '1',
-          } as LoginResponse),
+          } as LoginResponse)
         );
       } else {
         return res(
@@ -49,10 +49,10 @@ export const handlers = [
           ctx.json({
             status: 'Bad Request',
             message: 'Username and password does not match.',
-          } as GenericResponse),
+          } as GenericResponse)
         );
       }
-    },
+    }
   ),
   // POST register.
   rest.post(
@@ -63,9 +63,9 @@ export const handlers = [
         ctx.json({
           status: 'Created',
           record_id: '1',
-        } as RegisterResponse),
+        } as RegisterResponse)
       );
-    },
+    }
   ),
   // GET notes.
   rest.get(
@@ -75,9 +75,9 @@ export const handlers = [
         ctx.status(200),
         ctx.json({
           notes: notes,
-        } as NoteListResponse),
+        } as NoteListResponse)
       );
-    },
+    }
   ),
   // DELETE note.
   rest.delete(
@@ -92,9 +92,9 @@ export const handlers = [
         ctx.json({
           status: 'OK',
           message: 'Note deleted.',
-        } as GenericResponse),
+        } as GenericResponse)
       );
-    },
+    }
   ),
   // POST note.
   rest.post(
@@ -108,9 +108,9 @@ export const handlers = [
         ctx.json({
           status: 'OK',
           message: 'Note created.',
-        } as GenericResponse),
+        } as GenericResponse)
       );
-    },
+    }
   ),
   // PUT note.
   rest.put(
@@ -129,8 +129,8 @@ export const handlers = [
         ctx.json({
           status: 'OK',
           message: 'Note updated.',
-        } as GenericResponse),
+        } as GenericResponse)
       );
-    },
+    }
   ),
 ];

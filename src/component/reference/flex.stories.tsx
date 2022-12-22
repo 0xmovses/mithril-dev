@@ -128,7 +128,7 @@ export const flex = (args: Args): m.Component => {
                 minHeight: `${args.childMinHeight[0]}px`,
               },
             },
-            'Col 1 - 25px',
+            'Col 1 - 25px'
           ),
           m(
             'div',
@@ -143,7 +143,7 @@ export const flex = (args: Args): m.Component => {
                 minHeight: `${args.childMinHeight[1]}px`,
               },
             },
-            'Col 2 - 100px',
+            'Col 2 - 100px'
           ),
           m(
             'div',
@@ -158,9 +158,9 @@ export const flex = (args: Args): m.Component => {
                 minHeight: `${args.childMinHeight[2]}px`,
               },
             },
-            'Col 3 - 75px',
+            'Col 3 - 75px'
           ),
-        ],
+        ]
       ),
   };
 };
@@ -233,18 +233,18 @@ flex.argTypes = {
 
 export const flexTabs: m.ClosureComponent = () => ({
   view: () => (
-    <div style='display: flex; border: 3px solid blue; justify-content: space-between;'>
-      <div style='display: inline-flex; border: 3px solid red'>
-        <div style=''>Content1</div>
-        <div style=''>Content2</div>
+    <div style="display: flex; border: 3px solid blue; justify-content: space-between;">
+      <div style="display: inline-flex; border: 3px solid red">
+        <div style="">Content1</div>
+        <div style="">Content2</div>
       </div>
-      <div style='display: inline-flex; border: 3px solid yellow'>
-        <div style=''>Content3</div>
-        <div style=''>Content4</div>
+      <div style="display: inline-flex; border: 3px solid yellow">
+        <div style="">Content3</div>
+        <div style="">Content4</div>
       </div>
-      <div style='display: inline-flex; border: 3px solid brown'>
-        <div style=''>Content3</div>
-        <div style=''>Content4</div>
+      <div style="display: inline-flex; border: 3px solid brown">
+        <div style="">Content3</div>
+        <div style="">Content4</div>
       </div>
     </div>
   ),
