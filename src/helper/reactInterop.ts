@@ -117,18 +117,6 @@ export function getRouteParam(name?: string) {}
 
 export function getRoute() {}
 
-export function parsePathname(url: string): { path: string; params: Params } {
-  const match = matchPath(url, { path: url });
-  return {
-    path: match ? match.path : '',
-    params: match ? match.params : {},
-  };
-}
-
-export function render(element: Element, component?: any | null) {
-  ReactDOM.render();
-}
-
 export function rootRender(el: Element, vnodes: Children) {
   // React does not have a built-in method for rendering to an element directly.
   // Instead, you can use the `ReactDOM.render` method to render a React component to an element.
