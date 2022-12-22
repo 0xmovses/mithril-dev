@@ -62,6 +62,7 @@
     "@storybook/addon-storysource": "^6.2.9",
     "@storybook/addon-toolbars": "^6.2.9",
     "@storybook/mithril": "^6.2.9",
+    "@types/react-dom": "^18.0.9",
     "@types/react-hyperscript": "^3.0.9",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
