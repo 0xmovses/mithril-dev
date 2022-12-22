@@ -14,59 +14,25 @@ import renderer from 'react-hyperscript';
 import { matchPath, BrowserRouter } from 'react-router-dom';
 import * as ReactDOM from 'react-dom';
 
-/// CYANO CODE
+/// JAKE CODE
 
-type RenderElement = ReactElement | string | number | null;
 export type Children = ReactNode | ReactNode[];
 
-declare function renderFunction(
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement
-): ReactElement;
-
-declare function renderFunction<P = unknown>(
-  componentOrTag: FunctionComponent<P> | string,
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement
-): ReactElement;
-
-declare function renderFunction<P = unknown>(
-  componentOrTag: FunctionComponent<P> | string,
-  properties: P | null,
-  children?: Children | ReadonlyArray<RenderElement> | RenderElement
-): ReactElement<P>;
-
-type FragmentProps = {
-  [key: string]: string | number;
-};
-
-type HyperScript = typeof renderFunction & {
-  trust: (
-    html: string,
-    wrapper?: string
-  ) => ReactElement<{
-    dangerouslySetInnerHTML: {
-      __html: string;
-    };
-  }>;
-  fragment: (props?: FragmentProps, children?: ReactNode) => JSX.Element;
-  displayName: string;
-};
-
-export const render: HyperScript = Object.assign(
-  renderer as typeof renderFunction,
-  {
-    trust: (
-      html: string,
-      wrapper: FunctionComponent | string = ''
-    ): ReactElement =>
-      renderer(wrapper, {
-        dangerouslySetInnerHTML: { __html: html },
-      }),
-    fragment: (props: FragmentProps = {}, children: ReactNode = []) => (
-      <Fragment {...props}>{children}</Fragment>
-    ),
-    displayName: 'react',
+export const render = (tag: string | React.ComponentType, attrs: any, ...children: any[]) => {
+  if (typeof tag === 'string') {
+    return createElement(tag, attrs, ...children);
+  } else {
+    return createElement(tag, attrs, ...children);
   }
-);
+};
+
+render.trust = (html: string, wrapper?: string) => {
+  if (wrapper) {
+    return createElement(wrapper, { dangerouslySetInnerHTML: { __html: html } });
+  } else {
+    return createElement('div', { dangerouslySetInnerHTML: { __html: html } });
+  }
+};
 
 export type Component<Props = unknown> = FunctionComponent<Props>;
 
@@ -74,7 +40,7 @@ export const jsx = createElement;
 
 export type ResultNode<A> = ReactElement<A>;
 
-/// END CYANO CODE
+/// END JAKE CODE
 
 // TODO: verify this works
 export abstract class ClassComponent<A = {}> extends ReactComponent<A> {

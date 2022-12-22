@@ -7,7 +7,7 @@ interface Attrs {
   password?: string;
 }
 
-export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
+export const LoginPage: m.Component<Attrs> = ({ attrs:any }) => {
   let user: User = {
     email: '',
     password: '',
@@ -19,10 +19,6 @@ export const LoginPage: m.ClosureComponent<Attrs> = ({ attrs }) => {
       password: '',
     };
   };
-
-  // Prefill the fields.
-  user.email = attrs.email || '';
-  user.password = attrs.password || '';
 
   return {
     view: () =>
