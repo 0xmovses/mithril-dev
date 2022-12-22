@@ -20,19 +20,17 @@
     ],
     "rules" : {
         "prettier/prettier": [
-        "error",
-        {
-            "endOfLine": "auto"
-        },
+            "error", 
+            {
+                "endOfLine": "auto",
+            }
         ],
-        }
-    ,
+    },
     "plugins": [
         "@typescript-eslint"
     ],
     "overrides": [
         {
-            // Enable the rule specifically for TypeScript files to allow for mixed js/ts.
             "files": [
                 "*.ts",
                 "*.tsx"
